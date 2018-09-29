@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>grid-gap</title>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Remove this line for offline development: -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <style>
+    .grid {
+      display: grid;
+      grid-template: 100px 200px / 200px auto 150px;
+      /* grid-row-gap: 10px;
+    grid-column-gap: 30px; */
+      grid-gap: 10px 30px;
+    }
+
+    /* grid-gap: row columm */
+  </style>
+</head>
+
+<body>
+  <h2>Ultimate CSS Grid Course</h2>
+  <p>"grid-gap"</p>
+  <div class="grid">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+  </div>
+</body>
+
+</html>

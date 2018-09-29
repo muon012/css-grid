@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercise 4-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    html {
+        margin: 0;
+    }
+
+    body {
+        padding: 50px;
+        background-color: gray;
+    }
+
+    .container>div {
+        background-color: orangered;
+        border: 1px solid black;
+    }
+
+    .container {
+        display: grid;
+        grid: auto-flow 200px / repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media only screen and (max-width:750px) {
+        .container {
+            grid: auto-flow 200px / repeat(2, 1fr);
+        }
+    }
+    @media only screen and (max-width:600px) {
+        .container {
+            grid: auto-flow 200px / 1fr;
+        }
+    }
+
+    /* If you use the code BELOW, you will have a responsive layout. Just erase the media queries  */
+    /* .container{
+        display: grid;
+        grid: auto-flow 200px / repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 10px;
+    } */
+</style>
+
+<body>
+    <div class="container">
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+        <div>
+            <img src="./img/squirrel.jpg" alt="Picture of a squirrel">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

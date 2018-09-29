@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>grid-auto-rows/columns</title>
+        <link rel="stylesheet" href="css/base.css">
+        <!-- Remove this line for offline development: -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+        <style>
+            .grid {
+                display: grid;
+                grid-gap: 10px;
+                grid-template: repeat(2, 150px) / repeat(2, 150px);
+                grid-auto-rows: 100px;
+                grid-auto-columns: 150px;
+                /* 2. using "grid-auto-columns" after comment #1 will make ALL the new columns size 150px */
+            }
+
+            .grid div:nth-child(2) {
+                grid-column: 2 / span 2;
+                /* 1. using only this code and "grid-auto-rows" makes a third column of size auto */
+            }
+
+            /* "grid-auto-rows/columns" makes all the new rows/columns a certain size according to the specified value */
+        </style>
+    </head>
+
+    <body>
+        <h2>Ultimate CSS Grid Course</h2>
+        <p>"grid-auto-rows/columns"</p>
+        <div class="grid">
+            <div>Item 1 (Explicit Grid)</div>
+            <div>Item 2 (Explicit Grid)</div>
+            <div>Item 3 (Explicit Grid)</div>
+            <div>Item 4 (Explicit Grid)</div>
+            <div>Item 5 (Implicit Grid)</div>
+            <div>Item 6 (Implicit Grid)</div>
+        </div>
+        <h5>The new row (implicit grid) has an auto height that will increase as the content increases.
+        </h5>
+    </body>
+
+</html>

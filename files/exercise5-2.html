@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercise 5-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html {
+        margin: 0;
+    }
+    body {
+        padding: 50px;
+        text-align: center;
+        background-color: orange;
+    }
+    .container {
+        display: grid;
+        grid: repeat(3, 300px) / repeat(4, 1fr);
+        justify-content: center;
+        align-content: center;
+        grid-gap: 5px;
+    }
+    .container > div {
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .bg {
+        background-color: lightgray;
+    }
+    .subgrid {
+        display: grid;
+        grid: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-gap: 3px;
+        background-color: lightgray;
+
+    }
+    .subgrid > div {
+        border: 1px solid black;
+        padding: 30px;
+        background-color: gray;
+    }
+    .horizontal > div {
+        border: 1px solid black;
+        background-color: gray;
+        padding: 50px;
+    }
+    .vertical > div {
+        border: 1px solid black;
+        background-color: gray;
+        padding: 130px 0;
+    }
+    .horizontal {
+        display: grid;
+        grid: repeat(2, 1fr) / 1fr; 
+        grid-gap: 2px;
+        background-color: lightgray;
+    }
+    .vertical {
+        display: grid;
+        grid: 1fr / repeat(2, 1fr); 
+        grid-gap: 2px;
+        background-color: lightgray;
+
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="bg">Item 1</div>
+    <div class="subgrid">
+        <div>Sub 1</div>
+        <div>Sub 2</div>
+        <div>Sub 3</div>
+        <div>Sub 4</div>
+    </div>
+    <div class="subgrid">
+            <div>Sub 1</div>
+            <div>Sub 2</div>
+            <div>Sub 3</div>
+            <div>Sub 4</div>
+    </div>
+    <div class="bg">Item 4</div>
+    <div class="bg">Item 5</div>
+    <div class="horizontal">
+        <div>Sub 1</div>
+        <div>Sub 2</div>
+    </div>
+    <div class="vertical">
+            <div>Sub 1</div>
+            <div>Sub 2</div>    
+    </div>
+    <div class="bg">Item 8</div>
+    <div class="subgrid">
+            <div>Sub 1</div>
+            <div>Sub 2</div>
+            <div>Sub 3</div>
+            <div>Sub 4</div>
+    </div>
+    <div class="bg">Item 10</div>
+    <div class="bg">Item 11</div>
+    <div class="subgrid">
+            <div>Sub 1</div>
+            <div>Sub 2</div>
+            <div>Sub 3</div>
+            <div>Sub 4</div>
+    </div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercise 3-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html{
+        margin: 0;
+    }
+    body {
+        padding: 50px;
+        background-color: gold;
+    }
+    .container {
+        border: 2px solid black;
+        height: 300px;
+    }
+    .grid {
+        display: grid;
+        grid-template: repeat(2, 100px) / repeat(3, 100px);
+        grid-gap: 10px;
+        background-color: orange;
+        height: 250px;
+        border: 1px solid gray;
+    }
+    .grid > div {
+        border: 1px solid green;
+    }
+
+    /* First layout */
+
+    /* .grid {
+        justify-content: center;
+        align-content: end;
+    } */
+
+    /* Second layout */
+
+    /* .grid {
+        justify-content: space-between;
+        align-content: center;
+    } */
+
+    /* Third layout */
+    .grid {
+        justify-items: end;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+    </div>
+    
+</body>
+</html>

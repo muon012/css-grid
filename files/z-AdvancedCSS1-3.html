@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grids and Absolute Positioning I</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- Remove this line for offline development: -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+    <style>
+        .grid {
+            display: grid;
+            grid: repeat(2, 200px) / repeat(4, 1fr);
+            grid-gap: 10px;
+            position: relative;
+        }
+        .highligther {
+            position: absolute;
+            width: calc(100% + 10px); /*"calc" function will make the width increase by 5px from both ends */
+                                      /* You can use it as long as there is a math calculation inside */
+            grid-row: 2;
+            grid-column: 2 / span 2;
+            align-self: center;
+            top: -5px; /* moves the element 5px higher than its container (in this case, 5px higher than the row from the grid) */
+            left: -5px; /*moves the element 5px to the left of its container (in this case, 5px to the left of column 2) */
+
+        }
+
+        /* make sure grid is set to RELATIVE */
+    </style>
+</head>
+<h2>Ultimate CSS Grid Course</h2>
+<p>"CSS Grids and Absolute Positioning I"</p>
+<div class="grid">
+    <div class="highligther">high</div>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+</div>
+
+<body>
+
+</body>
+
+</html>

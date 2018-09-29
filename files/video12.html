@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Order</title>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Remove this line for offline development: -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <style>
+    .grid {
+      display: grid;
+      grid-template: 100px 200px / 200px auto 150px;
+      grid-gap: 10px;
+    }
+
+    .grid main:nth-child(6) {
+      order: -1;
+    }
+
+    .grid main:nth-child(3) {
+      order: 1;
+    }
+
+    .grid main:nth-child(2) {
+      order: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Ultimate CSS Grid Course</h2>
+  <p>"order"</p>
+  <div class="grid">
+    <main>Item 1</main>
+    <main>Item 2</main>
+    <main>Item 3</main>
+    <main>Item 4</main>
+    <main>Item 5</main>
+    <main>Item 6</main>
+  </div>
+</body>
+
+</html>

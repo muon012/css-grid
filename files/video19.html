@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>auto-fit</title>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Remove this line for offline development: -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <style>
+    .grid {
+      display: grid;
+      grid-template: 100px 100px 100px / repeat(auto-fit, minmax(100px, 1fr));
+      grid-gap: 10px;
+    }
+
+    /* "auto-fit" does the same thing as "auto-fill" but if there is an unused column/row like in "auto-fill" it 
+    will collapse it to zero */
+
+    /* it is a smart idea to use "auto-fit" with "minmax(XXXpx, 1fr)" as this will create columns/rows that are at least 
+    XXX pixels wide but if there is any space left it will distribute it among all the columns/rows */
+  </style>
+</head>
+
+<body>
+  <h2>Ultimate CSS Grid Course</h2>
+  <p>"auto-fit"</p>
+  <div class="grid">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+  </div>
+</body>
+
+</html>

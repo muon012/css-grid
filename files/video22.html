@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>align-items</title>
+        <link rel="stylesheet" href="css/base.css">
+        <!-- Remove this line for offline development: -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+        <style>
+            .grid {
+                display: grid;
+                grid-gap: 10px;
+                grid-template: repeat(3, 100px) / repeat(auto-fit, 200px);
+                align-items: center;
+            }
+
+            /* "align" means it will move the contents VERTICALLY */
+
+            /* this aligns the elements inside the grid, NOT the grid itself */
+
+            /* same values as justify-items */
+
+            /* 
+        "align-items" values:
+        'stretch' -- default value; stretches elements to occupy their own whole grid-area;
+        'start' -- causes elements to align to the top of the grid-area;
+        'end'-- aligns the elements to the bottom of the grid-area;
+        'center' -- aligns elements in the middle of the grid-area (vertically);
+        */
+        </style>
+    </head>
+
+    <body>
+        <h2>Ultimate CSS Grid Course</h2>
+        <p>"align-items"</p>
+        <div class="grid">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+    </body>
+
+</html>

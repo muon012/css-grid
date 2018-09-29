@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>justify/align-self</title>
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Remove this line for offline development: -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+    <style>
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+            border: 1px solid white;
+            grid-template: repeat(2, 150px) / repeat(3, 200px);
+            padding: 10px;
+            height: 400px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .grid div:nth-child(1) {
+            justify-self: center;
+        }
+        .grid div:nth-child(3) {
+            justify-self: end;
+            align-self: end;
+        }
+        .grid div:nth-child(5) {
+            justify-self: center;
+            align-self: start;
+        }
+
+        /* Same 4 values as "justify/align-items"*/
+
+        /* possible values: 
+        'start'
+        'center'
+        'end'
+        'stretch' -- default value
+        */
+
+        /* this method targets one element at a time from the grid. It will override the aligment of the whole grid */
+
+
+    </style>
+</head>
+
+<body>
+        <h2>Ultimate CSS Grid Course</h2>
+        <p>"justify/align self"</p>
+    <div class="grid">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+    </div>
+</body>
+
+</html>

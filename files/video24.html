@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>align-content</title>
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Remove this line for offline development: -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+    <style>
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+            border: 1px solid white;
+            grid-template: repeat(2, 100px) / 200px auto 100px;
+            align-content: space-evenly;
+            height: 300px;
+        }
+
+        /* Same 7 values as "justify-content"*/
+
+        /* possible values: 
+        'start' -- moves the whole grid to the top
+        'center' -- moves the whole grid to the middle
+        'end' -- moves the whole grid to the bottom
+        'stretch' -- (deafult value) stretches the content inside the grid to occupy all of its space (make sure rows are not fixed 
+                     to a specific value and instead have something like "1fr")(also make sure the height is greater than the 
+                     height given by the rows i.e. if 3 rows of 100px then set height to anything higher than 300px, otherwise there
+                     wont be any change.
+        'space-around' -- adds the same margin to the top and bottom of each row inside the grid
+        'space-between' -- creates margin between the rows, but never outside the grid. In this case there is no margin
+                           on the top of the first row, nor on the bottom of the last row. If there is a third row
+                           it will be spaced in between the first and last row, but again, there is no margin outside the grid
+        'space-evently' -- it is the same as "space-around" but now the margin between rows is not double (as a result of the
+                           margin on the bottom of one row plus the margin on the top of the following row), but the same all
+                           over the grid. ALL THE MARGINS ARE THE SAME LENGTH!!!
+        */
+
+        /* "align" means it will move the contents VERTICALLY */
+
+        /* make sure there is enough space in the grid and that the sizes for the rows allow for changes be made along the y-axis */
+
+
+
+    </style>
+</head>
+
+<body>
+        <h2>Ultimate CSS Grid Course</h2>
+        <p>"align-content"</p>
+    <div class="grid">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+    </div>
+</body>
+
+</html>

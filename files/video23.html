@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>justify-content</title>
+        <link rel="stylesheet" href="css/base.css">
+        <!-- Remove this line for offline development: -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+        <style>
+            .grid {
+                display: grid;
+                grid-gap: 10px;
+                border: 1px solid white;
+                grid-template: repeat(3, 100px) / repeat(2, 200px);
+                justify-content: space-evenly;
+            }
+
+            /* "justify" means it will move the elements HORIZONTALLY*/
+
+            /* possible values: 
+        'start' -- moves the whole grid to the left
+        'center' -- moves the whole grid to the middle
+        'end' -- moves the whole grid to the right
+        'stretch' -- (default value) stretches the content inside the grid to occupy all of its space (make sure columns are not fixed 
+                     to a specific value and instead have something like "1fr")
+        'space-around' -- adds the same margin to the left and right of each column inside the grid
+        'space-between' -- creates margin between the columns, but never outside the grid. In this case there is no margin
+                           to the left of the first column, nor to the right of the last column. If there is a third column
+                           it will be spaced in between the first and last column, but again, there is no margin outside the grid
+        'space-evently' -- it is the same as "space-around" but now the margin between columns is not double (as a result of the
+                           margin to the right of one column plus the margin to the left of the following column), but the same all
+                           over the grid. ALL THE MARGINS ARE THE SAME LENGTH!!!
+        */
+        </style>
+    </head>
+
+    <body>
+        <h2>Ultimate CSS Grid Course</h2>
+        <p>"justify-content"</p>
+        <div class="grid">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>grid-template-areas</title>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Remove this line for offline development: -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <style>
+    .grid {
+      display: grid;
+      grid-template: 100px 100px 100px / 200px auto 150px;
+      grid-template-areas: 
+      "E  .  A"
+      "B  C  A" 
+      "F  D  A"
+    }
+
+    .grid div:nth-child(1) {
+      grid-area: A;
+    }
+
+    .grid div:nth-child(2) {
+      grid-area: B;
+    }
+
+    .grid div:nth-child(3) {
+      grid-area: C;
+    }
+
+    .grid div:nth-child(4) {
+      grid-area: D;
+    }
+
+    .grid div:nth-child(5) {
+      grid-area: E;
+    }
+
+    .grid div:nth-child(6) {
+      grid-area: F;
+    }
+
+    /* the dot means that there will be an empty space in that grid area */
+  </style>
+</head>
+
+<body>
+  <h2>Ultimate CSS Grid Course</h2>
+  <p>"grid-template-areas" using names</p>
+  <div class="grid">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+  </div>
+</body>
+
+</html>

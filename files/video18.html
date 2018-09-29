@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>auto-fill</title>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Remove this line for offline development: -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <style>
+    .grid {
+      display: grid;
+      grid-template: 100px 100px 100px / repeat(auto-fill, 100px);
+      grid-gap: 10px;
+    }
+
+    /* Using auto-fill here with repeat will create as many 100px columns as the grid can contain */
+    /* If you use minmax with two specific values, the auto-fill function will choose the max value */
+
+    /* auto-fill prefers max sizes. */
+
+    /* If you use minmax with an auto/fr value and another specific value, it will always choose the specific value  */
+
+  </style>
+</head>
+
+<body>
+  <h2>Ultimate CSS Grid Course</h2>
+  <p>"Autofill"</p>
+  <div class="grid">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+  </div>
+</body>
+
+</html>

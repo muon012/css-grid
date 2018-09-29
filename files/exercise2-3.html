@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercise 2-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+            margin: 0;
+        }
+
+        body {
+            padding: 30px;
+        }
+
+        .container>* {
+            border: 2px solid gray;
+            background-color: chartreuse;
+            text-align: center;
+        }
+
+        /* 
+        .container {
+            display: grid;
+            width: 500px;
+            grid-gap: 10px;
+            grid-template: repeat(2, 100px) / repeat(auto-fill, minmax(100px,200px));
+        } 
+
+         Using auto-fill will only create 2 columns since it prefers the max size (in this case 200px)
+        */
+        
+        /*
+        .container {
+            display: grid;
+            width: 500px;
+            grid-gap: 10px;
+            grid-template: repeat(2, 100px) / repeat(auto-fill, minmax(100px,1fr));
+        }
+
+        This generates 4 columns because the max size is not set, so the min size is used 
+        */
+
+        /* 
+        .container {
+            display: grid;
+            width: 500px;
+            grid-gap: 10px;
+            grid-template: repeat(2, 100px) / repeat(auto-fit, minmax(100px,1fr));
+        } 
+
+        This still generates the same size and number of columns.
+        */
+
+        .container {
+            display: grid;
+            width: 540px;
+            grid-gap: 10px;
+            grid-template: repeat(2, 100px) / repeat(auto-fill, minmax(100px,1fr));
+        }
+
+        /* Due to grid-gap and the column width, at
+        540px, auto-fill is able to generate a fifth unused column.
+        Thus, if you use auto-fit here , it will collapse that to 0px, making the
+        remaining four columns take up more space.
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+</body>
+
+</html>

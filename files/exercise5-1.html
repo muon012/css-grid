@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercise 5-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    html {
+        margin: 0;
+    }
+    body {
+        padding: 50px;
+        text-align: center;
+        background-color: orange;
+    }
+    .container {
+        display: grid;
+        grid: repeat(5, 80px) / repeat(5, 80px);
+        justify-content: center;
+        align-content: center;
+    }
+    .container > div {
+        border: 1px solid black;
+    }
+    .container div:nth-child(1) {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 3;
+        background-color: rgba(150, 0, 0, 0.7);
+        z-index: 1;
+    }
+    .container div:nth-child(2) {
+        grid-row: 2 / span 3;
+        grid-column: 2 / span 3;
+        background-color: rgba(0, 0, 150, 0.7);
+        z-index: -1;
+    }
+    .container div:nth-child(3) {
+        grid-row: 3 / span 3;
+        grid-column: 3 / span 3;
+        background-color: rgba(0, 150, 0, 0.7);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Top</div>
+        <div>Bottom</div>
+        <div>Middle</div>
+    </div>
+    
+</body>
+</html>
